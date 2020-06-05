@@ -94,7 +94,7 @@ class PointsController {
         const selectPoint = await trx('points').where('id', id);
 
         if(!selectPoint){
-            return response.json({message: "O point não está cadastrad."});s
+            return response.json({message: "O point não está cadastrado."});
         }
         
         await trx('point_items').delete('item_id').where('point_id', id);
